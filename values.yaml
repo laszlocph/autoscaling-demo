@@ -1,0 +1,14 @@
+image:
+  repository: laszlocloud/autoscaling-demo
+  tag: latest
+containerPort: 8888
+podAnnotations:
+  prometheus.io/scrape: 'true'
+  prometheus.io/port: '8888'
+resources:
+  requests:
+    cpu: "50m"
+    memory: "200Mi"
+  limits:
+    cpu: "2000m"
+    memory: "200Mi"
